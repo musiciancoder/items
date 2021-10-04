@@ -10,7 +10,7 @@ import com.formacionbdi.springboot.app.item.models.Producto;
 
 //Acá (en la interface algoClientRest) se se setea lo mismo que en el controlador del servicio que queremos llamar
 
-@FeignClient(name = "servicio-productos")
+@FeignClient(name = "servicio-productos") //el nombre del servicio que estamos llamando que va en el applications.properties de aquel servicio
 public interface ProductoClienteRest {
 	
 	@GetMapping("/listar")

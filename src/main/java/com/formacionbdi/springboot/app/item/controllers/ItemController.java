@@ -15,7 +15,7 @@ import com.formacionbdi.springboot.app.item.models.service.ItemService;
 public class ItemController {
 	
 	@Autowired
-	@Qualifier("serviceFeign")
+	@Qualifier("serviceFeign") //ya que tenemos dos clases de servicio se debe hacer expicito la que se va a usar
 	private ItemService itemService;
 	
 	@GetMapping("/listar")
@@ -23,7 +23,7 @@ public class ItemController {
 		return itemService.findAll();
 	}
 	
-	@GetMapping("/ver/{id}/cantidad/{cantidad}")
+	@GetMapping("/ver/{id}/cantidad/{cantidad}") //ver/{id}/ es del otro servicio,cantidad/{cantidad} es de este servicio
 	public Item detalle(@PathVariable Long id, @PathVariable Integer cantidad) {
 		return itemService.findById(id, cantidad);
 	}

@@ -9,7 +9,6 @@ public class Producto {
 	private Double precio;
 	private Date createAt;
 	private Integer port;
-	
 	public Long getId() {
 		return id;
 	}

@@ -17,6 +17,7 @@
 
 	<properties>
 		<java.version>12</java.version>
+<!--		Balance de carga con Rinon (solo con version de spring no superior a 2.2)-->
 		<spring-cloud.version>Hoxton.SR12</spring-cloud.version>
 	</properties>
 

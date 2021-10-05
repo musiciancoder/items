@@ -7,13 +7,8 @@ import org.springframework.web.client.RestTemplate;
 
 @Configuration //permite crear objestos componentes de springs o "beans"
 public class AppConfig {
-
-
-	@Bean("clienteRest") //queda guardado en el contenedor de beans con este nombre. C
-
-	// on esto se puede inyectar este cliente http (en ItemService) para poder acceder a recursos que estan en otros servicios
-
-	@LoadBalanced
+	@Bean("clienteRest") //queda guardado en el contenedor de beans con este nombre. Con esto se puede inyectar este cliente http (en ItemServiceImpl) para poder acceder a recursos que estan en otros servicios
+	@LoadBalanced //balancear carga
 	public RestTemplate registrarRestTemplate() {
 		return new RestTemplate();
 	}

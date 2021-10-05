@@ -15,8 +15,8 @@ import com.formacionbdi.springboot.app.item.models.service.ItemService;
 public class ItemController {
 	//ya que tenemos dos clases de servicio se debe hacer expicito la que se va a usar con @Qualifier
 	@Autowired
-	//@Qualifier("serviceFeign")  //con Feign
-	@Qualifier("serviceRestTemplate") //con restTemplate
+	@Qualifier("serviceFeign")  //con Feign
+	//@Qualifier("serviceRestTemplate") //con restTemplate
 	private ItemService itemService;
 	
 	@GetMapping("/listar")
